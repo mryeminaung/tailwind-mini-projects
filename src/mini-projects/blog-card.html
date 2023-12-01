@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            href="../Tailwind_CSS_Logo.svg.png"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="../../dist/output.css" />
+        <title>Blog Card</title>
+    </head>
+    <body>
+        <div class="flex h-screen items-center justify-center">
+            <!-- blog card -->
+            <div
+                class="flex h-[270px] w-[560px] items-center gap-4 rounded-2xl p-3 shadow-xl transition-transform duration-300 hover:scale-105"
+            >
+                <div class="h-full overflow-hidden rounded-lg">
+                    <img
+                        src="https://images.unsplash.com/photo-1543852786-1cf6624b9987?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                        alt=""
+                        class="h-auto object-cover"
+                    />
+                </div>
+                <div>
+                    <h2 class="text-2xl font-extrabold">Card Image</h2>
+                    <h3 class="font-semibold">Nov 20, 2022</h3>
+                    <p class="my-2 text-slate-700">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. At officia tempore provident excepturi recusandae,
+                        accusamus quasi vero consequuntur harum perspiciatis?
+                    </p>
+                    <button
+                        class="rounded-lg bg-pink-500 px-4 py-2 text-white hover:bg-pink-600"
+                    >
+                        See More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            href="../Tailwind_CSS_Logo.svg.png"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="../../dist/output.css" />
+        <title>Shopping Card UI</title>
+    </head>
+    <body>
+        <div class="flex h-screen items-center justify-center">
+            <!-- price card -->
+            <div class="flex w-[750px] rounded-2xl p-10 shadow-xl">
+                <div>
+                    <img
+                        src="./imgs/microphone.webp"
+                        alt="microphone"
+                        class="w-[350px]"
+                    />
+                </div>
+                <div>
+                    <h4 class="mb-5 text-2xl">
+                        HyperX QuadCast S - USB Microphone (Black-Grey) - RGB
+                        Lighting
+                    </h4>
+                    <p class="text-xl line-through">$159.99</p>
+                    <p class="text-5xl font-bold">$150</p>
+                    <div class="my-5 flex items-center justify-between gap-4">
+                        <button
+                            class="w-full cursor-pointer rounded-md bg-red-500 p-3 text-white active:bg-red-600"
+                        >
+                            Add to Card
+                        </button>
+                        <button class="rounded-md border border-red-500 p-3">
+                            <img
+                                src="./imgs/love-heart.svg.png"
+                                alt="love heart"
+                                class="w-6"
+                            />
+                        </button>
+                    </div>
+                    <p class="flex items-center text-xl">
+                        <span
+                            class="mr-2 inline-block h-3 w-3 rounded-full bg-red-500 p-1"
+                        ></span>
+                        4+ pcs, In Stock
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

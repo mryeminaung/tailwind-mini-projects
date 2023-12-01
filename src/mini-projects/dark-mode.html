@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            href="../Tailwind_CSS_Logo.svg.png"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="../../dist/output.css" />
+        <title>Light / Dark Mode</title>
+        <style>
+            /* Toggle B */
+            input:checked ~ .dot {
+                transform: translateX(100%);
+                background-color: rgb(236, 71, 253);
+            }
+        </style>
+    </head>
+    <body class="bg-white transition-colors dark:bg-slate-900 dark:text-white">
+        <div class="flex h-screen items-center justify-center">
+            <!-- blog card -->
+            <div
+                class="flex w-[560px] gap-4 space-y-4 rounded-2xl p-3 shadow-xl transition-all duration-300 hover:scale-105 dark:bg-slate-800"
+            >
+                <div class="h-full overflow-hidden rounded-lg">
+                    <img
+                        src="https://images.unsplash.com/photo-1543852786-1cf6624b9987?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                        alt=""
+                        class="h-full object-cover"
+                    />
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-black dark:text-white">
+                        Card Image
+                    </h2>
+                    <h3 class="text-slate-800 dark:text-slate-500">
+                        Nov 20, 2022
+                    </h3>
+                    <p class="my-2 text-slate-700 dark:text-slate-500">
+                        Lorem ipsum g elit. Eius non, sequi porro consequatur
+                        possimus, ex consequuntur corporis harum, odio fugit qui
+                        beatae. Maiores consequuntur quasi veritatis ipsum
+                        ducimus minus delectus!
+                    </p>
+                    <button
+                        class="mt-3 rounded-lg bg-pink-500 px-4 py-2 text-white hover:bg-pink-600"
+                    >
+                        See More
+                    </button>
+                    <!-- light / mode toggle button -->
+                    <!-- Toggle B -->
+                    <div class="mt-4">
+                        <label
+                            for="toggleB"
+                            class="flex cursor-pointer items-center"
+                        >
+                            <!-- toggle -->
+                            <div class="relative">
+                                <!-- input -->
+                                <input
+                                    type="checkbox"
+                                    id="toggleB"
+                                    class="sr-only"
+                                />
+                                <!-- line -->
+                                <div
+                                    class="block h-8 w-14 rounded-full bg-gray-600"
+                                ></div>
+                                <!-- dot -->
+                                <div
+                                    class="dot absolute left-1 top-1 h-6 w-6 rounded-full bg-white transition"
+                                ></div>
+                            </div>
+                            <!-- label -->
+                            <div
+                                class="ml-3 font-medium text-gray-700 dark:text-slate-500"
+                            >
+                                Toggle Me!
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- light / dark mode -->
+        <script>
+            const toggleB = document.getElementById("toggleB");
+
+            const changeThemToDark = () => {
+                document.documentElement.classList.add("dark");
+                localStorage.setItem("data-theme", "dark");
+            };
+
+            const changeThemToLight = () => {
+                document.documentElement.classList.remove("dark");
+                localStorage.setItem("data-theme", "light");
+            };
+
+            toggleB.addEventListener("click", () => {
+                const theme = localStorage.getItem("data-theme");
+                if (theme === "dark") {
+                    changeThemToLight();
+                } else {
+                    changeThemToDark();
+                }
+            });
+
+            const theme = localStorage.getItem("data-theme");
+            if (theme === "dark") {
+                changeThemToDark();
+                toggleB.setAttribute("checked", "checked");
+            } else {
+                changeThemToLight();
+            }
+        </script>
+    </body>
+</html>

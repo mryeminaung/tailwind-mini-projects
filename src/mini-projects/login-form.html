@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            href="../Tailwind_CSS_Logo.svg.png"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="../../dist/output.css" />
+        <title>Login UI</title>
+    </head>
+    <body>
+        <div class="flex h-screen items-center justify-center">
+            <!-- login ui -->
+            <div class="rounded-2xl p-6 shadow-xl">
+                <h2 class="mb-4 text-center text-3xl font-extrabold">Login</h2>
+                <form action="#" class="space-y-4" autocomplete="off">
+                    <input
+                        class="w-full rounded-md border border-gray-300 p-3 focus:outline-red-500"
+                        type="text"
+                        placeholder="Enter your email"
+                    />
+                    <input
+                        class="w-full rounded-md border border-gray-300 p-3 focus:outline-red-500"
+                        type="password"
+                        placeholder="Enter your password"
+                    />
+                    <input
+                        type="submit"
+                        class="w-full cursor-pointer rounded-md bg-red-500 p-3 text-white active:bg-red-600"
+                        value="Login"
+                    />
+                    <div class="flex items-center justify-between">
+                        <a href="#" class="hover:underline">Forget password</a>
+                        <a href="#" class="hover:underline"
+                            >Create new account</a
+                        >
+                    </div>
+                </form>
+                <hr class="my-3" />
+                <div class="flex items-center gap-4">
+                    <a
+                        href="#"
+                        class="flex w-full items-center justify-center rounded-md border border-red-500 p-3 text-center"
+                    >
+                        <img
+                            src="./imgs/Google__G__Logo.svg.webp"
+                            alt=""
+                            class="mr-1 w-5"
+                        />
+                        Google
+                    </a>
+                    <a
+                        href="#"
+                        class="flex w-full items-center justify-center rounded-md border border-red-500 p-3 text-center"
+                    >
+                        <img
+                            src="./imgs/Facebook_f_logo_(2019).svg.webp"
+                            alt=""
+                            class="mr-1 w-5"
+                        />Facebok</a
+                    >
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
